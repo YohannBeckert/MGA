@@ -1,0 +1,47 @@
+#schedule-main{
+    background: linear-gradient(to bottom right,#420101, #0e0000);
+    color: white;
+    
+    .content-schedule{
+        width: 60%;
+        height: 60%;
+        background-color: #5e4135;
+
+        .content-schedule-menu{            
+            width: 40%;
+
+            .schedule-menu{
+                height: 100%;
+
+                .item-schedule{
+                    height: 100%;
+                    cursor: pointer;
+
+                    &:hover{
+                        color: black;
+                        background-color: rgb(226, 176, 147);
+                        transition: 0.5s;
+                        font-size: 20px;
+                    }  
+                }
+            }
+        }
+        .planning{
+            width: 60%;
+        }
+        table{
+            border-collapse: collapse;
+            tr{
+                td{
+                    border: 1px solid white;
+                    padding: 10px;
+    
+                    &:last-child{
+                        width: 15rem;
+                    }
+                }
+            }           
+        }
+    }
+    
+}

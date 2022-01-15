@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Log in!{% endblock %}
+
+{% block body %}
+<main class="single-page connect-container">
+{% for message in app.flashes('error-mail') %}
+    <div class="flash error">
+        {{ message }}
+    </div>
+{% endfor %}
+    <div class="single-page parallelogram totaly-center flex-column">
+        <h1 class="m-0 pb-5">Virtu'Oz - Inscription</h1>
+        <div class="div-loggin d-flex flex-column align-items-center">           
+            {{ form_start(form) }}
+                <div class="input-group flex-nowrap flex-column">
+                    <div class="input-login-item mb-3">
+                        {{ form_label(form.email) }}
+                        <div class="mail">
+                            {{ form_widget(form.email) }}                                     
+                        </div>                    
+                    </div>
+                </div>
+
+                <div class="input-group flex-nowrap flex-column">                    
+                    {{ form_widget(form.password) }}                                                               
+                
+                </div>
+                <button type="submit" class="btn btn-success align-self-center inscription">M'inscrire</button>
+            {{ form_end(form) }}
+            <p class="text-sm mar-no text-center"><a style="color:#898989!important;" href="{{path('app_login')}}">Déjà inscrit ?</a></p>
+        </div>
+    </div>   
+</main>
+{% endblock %}
+
+
+    {#
+        {% if error %}
+            <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+        {% endif %}
+
+        {% if app.user %}
+            <div class="mb-3">
+                You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
+            </div>
+        {% endif %}
+
+    #}

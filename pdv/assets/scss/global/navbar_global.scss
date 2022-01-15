@@ -1,0 +1,200 @@
+                         /***********/
+                        /* Desktop */
+                       /***********/
+#global-nav{
+
+    height: 4rem;
+    background-color: #323333;
+    box-shadow: 0px 1px 6px #605757;
+    padding: 0 15px;
+
+    a{
+        color: white;
+        cursor: pointer;
+    }
+
+    .div-logo{
+        width: 10rem;
+        text-decoration: none;
+
+        &:hover{
+            text-decoration: none;
+            color: white;
+        }
+
+        .logo{
+            line-height: 1.5;
+        }
+    }
+
+    .navigation{
+        
+        .item-nav{
+            padding: 0 8px;
+            text-decoration: none;
+
+            &:hover{
+                color: white;
+                text-decoration: underline;
+                background-color: #9d9d9dad;
+                transition: 0.5s;
+            }           
+        }
+
+    }
+
+
+                     /***************/
+                    /* menu burger */
+                   /* *************/
+
+    //Burger button
+    .invisible{
+        display: none !important;
+    }
+    .clicked{
+        z-index: 9999; 
+    }
+
+    #menu-burger {
+        display:inline-block; 
+        cursor:pointer;
+        margin-right: 3%;
+        position: absolute;
+        top: 0.7rem;
+        right: 0rem;
+        z-index: 9999;
+
+        .bar1, .bar2, .bar3{
+            width:32px;
+            height:5px; 
+            background-color:#F1F1F1;
+            margin:6px 0;
+            transition:0.4s;
+            box-shadow: black 0px 0px 1.5px;
+        }
+
+        &:hover{
+        opacity:0.75;
+        transition:.5s;
+        }
+    }
+
+  
+ /*  #menu-burger .bar1,#menu-burger .bar2,#menu-burger .bar3 {
+    width:32px;
+    height:5px; 
+    background-color:#F1F1F1;
+    margin:6px 0;
+    transition:0.4s;
+    box-shadow: black 0px 0px 1.5px;
+  } */
+
+    #menu-burger.clicked .bar1 {
+        -webkit-transform:rotate(-45deg) translate(-9px, 6px); 
+        transform:rotate(-45deg) translate(-9px, 6px);
+        background-color:black;
+    }
+    #menu-burger.clicked .bar2 {
+        opacity: 0;
+        background-color:black;
+    }
+    #menu-burger.clicked .bar3 {
+        -webkit-transform:rotate(45deg) translate(-8px, -8px); 
+        transform:rotate(45deg) translate(-8px, -8px);
+        background-color:black;
+    }
+
+    #menu-slide.visible {
+        animation:.5s slideRight ease-in forwards;
+        transition-delay:0s;
+    }
+    #menu-slide.invisible {
+        animation:1s slideLeft ease-out forwards; 
+        transition-delay:0s;
+    }
+    
+    /* Animations pour le menu slide */
+    @keyframes slideRight {
+        from {left:-25%;}
+        to {left:0%;}
+    }
+    @-webkit-keyframes slideRight {
+        from {left:-25%;}
+        to {left:0%;}
+    }
+    @keyframes slideLeft {
+        from {left:0%;}
+        to {left:-25%;}
+    }
+    @-webkit-keyframes slideLeft {
+        from {left:0%;}
+        to {left:-25%;}
+    }   
+
+    
+    //Menu mobile
+    #menu-slide{
+        position: absolute;
+        z-index: 9999;
+        right: 0;
+        top: 6.5%;
+        margin: 10px;
+
+        a{
+            color: black;
+            padding: 0 5px;
+            text-decoration: none;
+        }
+    }
+
+    .item-nav-slide{
+        border-top: 1px solid black;
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+        background-color: white;
+        width: 12rem;
+        height: 2.5rem;
+
+        &:last-child{
+            border-bottom: 1px solid black;
+        }
+
+        &:hover{
+            background-color: #9d9d9d !important;
+            color: white !important;
+            text-shadow: 0px 0px 2px black;
+        }
+    }
+
+
+                      /**************/
+                     /* Responsive */
+                    /**************/
+
+
+    @media screen and (max-width: 640px){
+        #menu-burger{
+            display: inline-block;
+        }
+        .navigation{
+            display: none !important;
+        }
+        .param-connect a{
+            display: none !important;
+        }
+    }
+    @media screen and (min-width: 641px){
+        #menu-burger{
+            display: none;
+        }
+        .navigation{
+            display: flex;
+        }
+        .param-connect a{
+            display: block;
+        }
+    }
+
+}
+

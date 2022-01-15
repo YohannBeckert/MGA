@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+<main class="single-page connect-container">
+{% for message in app.flashes('success-inscription') %}
+    <div class="flash success">
+        {{ message }}
+    </div>
+{% endfor %}
+    <div class="single-page parallelogram totaly-center flex-column">
+        <h1 class="m-0 pb-3">Virtu'Oz - Connexion</h1>
+        <div class="div-loggin d-flex flex-column align-items-center">           
+            <form action="" method="POST" class="login-form" role="form">
+                <div class="input-group mb-3">
+                    <label for="email-connect" class="label-deco totaly-center">
+                        <i class="bi bi-person-fill"></i>
+                    </label>
+                    <input type="email" value="{{ last_username }}" class="form-control width-input" id="email-connect" autocomplete="email" name="email-connect" placeholder="Votre adresse email..." required>
+                </div>
+                <div class="input-group mb-3">
+                    <label for="password-connect" class="label-deco totaly-center">
+                        <i class="bi bi-shield-lock-fill"></i>
+                    </label>
+                    <input type="password" class="form-control width-input" id="password-connect" name="password-connect" autocomplete="current-password" placeholder="Votre mot de passe..." required>
+                </div>
+                <div class="d-flex justify-content-evenly">
+                    <div class="d-flex align-items-center">
+                        <input type="checkbox" class="form-check-input" id="stay-connect">
+                        <label class="form-check-label" for="stay-connect">Rester connecté</label>
+                    </div>
+                    <button type="submit" class="btn btn-success">ME CONNECTER</button>
+                    <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+                </div>               
+            </form>
+            <p class="text-sm mar-no text-center forgot-pw"><a style="color:#898989!important;" href="">Vous avez oublié votre mot de passe ?</a></p>
+            <a href="{{path('register')}}" class="btn btn-info mt-2">
+                Pas encore inscrit?
+            </a>
+        </div>
+    </div>   
+</main>
+{% endblock %}
+
+
+    {#
+        {% if error %}
+            <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+        {% endif %}
+
+        {% if app.user %}
+            <div class="mb-3">
+                You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
+            </div>
+        {% endif %}
+
+        Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+        See https://symfony.com/doc/current/security/remember_me.html
+
+        <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" name="_remember_me"> Remember me
+            </label>
+        </div>
+    #}

@@ -1,0 +1,33 @@
+.connect-container{
+    background-image: url("../../images/bg_connect.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: -50rem;   
+}
+.login-form{
+    margin: 20px 0;
+}
+.width-input{
+    border-radius: 0;
+    width: 21rem !important;
+}
+
+.label-deco{
+    width: 2rem;
+    border: 1px solid #ced4da;
+}
+
+.form-check-input{
+    margin: 0 3px 0 0;
+    cursor: pointer;
+}
+
+.div-loggin .btn-info{
+    width: 14rem;
+}
+.parallelogram{
+    clip-path: polygon(17.5% 0, 62.5% 0, 82.5% 100%, 37.5% 100%);
+    background-color: #2a0f0f;
+    padding-bottom: 2.5rem;
+    color: white;
+}

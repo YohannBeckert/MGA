@@ -1,0 +1,101 @@
+                      /*--------------------*/
+                     /*---Balises global---*/
+                    /*--------------------*/
+
+html, body{
+    height: 100vh;
+    width: 100vw;
+}
+p{
+    margin: 0;
+}
+li{
+    list-style: none;
+}
+
+                      /*------------------------*/
+                     /*--Réécriture Bootstrap--*/
+                    /*------------------------*/
+
+.hidden{
+    visibility: hidden;
+}
+
+//Boutons
+.btn{
+    border-radius: 2px;
+}
+
+.btn-info{
+    background-color: #135c9b;
+    border-color: #135c9b;
+    color: white;
+}
+.btn-success{
+    background-color: #198721;
+    border-color: #198721;
+}
+
+//Icons
+.bi-x-input{
+    color: red;
+    position: absolute;
+    top: 35px;
+    right: 0;
+}
+.bi-check-input{
+    color: green;
+    position: absolute;
+    top: 35px;
+    right: 0;
+}
+
+                      /*------------------------*/
+                     /*--Classes Personnelles--*/
+                    /*------------------------*/
+
+.single-page{
+    height: 87vh;
+    width: 100%;
+}
+
+.nav-active{
+    background-color: #9d9d9d !important;
+    color: white !important;
+    text-shadow: 0px 0px 2px black;
+}
+
+//Positionnement
+.totaly-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+//Gestion des erreurs
+.div-error em{
+    color: red;
+    font-size: 10.5px;
+    margin-top: 2px;
+}
+
+//Message flash
+.flash{  
+    color: white;
+    padding: 8px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px black;
+    position: absolute;
+    top: 70px;
+    right: 5px;
+}
+.success{
+    background-color: #26a52f;
+}
+.warning{
+    background-color: #af5019;
+}
+.error{
+    background-color: #c12222;
+}

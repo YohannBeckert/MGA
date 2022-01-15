@@ -1,0 +1,47 @@
+ {% set route_name = app.request.attributes.get('_route') %}
+<nav id="global-nav" class="d-flex text-white justify-content-between">
+    <a href="/" class="div-logo h-100 d-flex align-items-center">
+        <h1 class="logo m-0">MGA</h1>
+    </a>
+    <ul class="navigation d-flex m-0 p-0">
+        <a href="{{ path('homepage') }}" {% if route_name == "homepage" %}class="item-nav d-flex align-items-center nav-active"{% else %} class="item-nav d-flex align-items-center"{% endif %}>
+            <li>Accueil</li>
+        </a>
+        <a href="{{ path('schedule') }}" {% if route_name == "schedule" %}class="item-nav d-flex align-items-center nav-active"{% else %} class="item-nav d-flex align-items-center"{% endif %}>
+            <li>Horaires</li>
+        </a>
+        <a class="item-nav d-flex align-items-center">
+            <li>Boutiques</li>
+        </a>
+        <a class="item-nav d-flex align-items-center">
+            <li>Restauration</li>
+        </a>
+    </ul>
+    <div class="param-connect d-flex">
+        <div id="menu-burger">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <a href="{{ path('app_login') }}" class="item-nav d-flex align-items-center">
+            <i class="bi bi-person-fill"></i>
+            <p>Connexion</p>
+        </a>
+    </div>
+    <ul id="menu-slide" class="invisible d-flex flex-column aligns-items-end">
+        <a href="/" class="item-nav-slide d-flex align-items-center justify-content-end">
+            <li>Accueil</li>
+        </a>
+        <a class="item-nav-slide d-flex align-items-center justify-content-end">
+            <li>Horaires</li>
+        </a>
+        <a class="item-nav-slide d-flex align-items-center justify-content-end">
+            <li>Boutiques</li>
+        </a>
+        <a class="item-nav-slide d-flex align-items-center justify-content-end">
+            <li>Restauration</li>
+        </a>
+    </ul>
+</nav>
+
+

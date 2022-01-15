@@ -1,0 +1,10 @@
+@import "~bootstrap/scss/bootstrap";
+
+@import './global/global.scss';
+@import './global/navbar_global.scss';
+@import './global/footer.scss';
+
+@import './connection/connection.scss';
+@import './connection/register.scss';
+
+@import './schedule/schedule.scss';
